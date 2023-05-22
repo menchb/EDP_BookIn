@@ -64,6 +64,8 @@ Partial Class OrderForm
         Me.btnReloadOrderLine = New System.Windows.Forms.Button()
         Me.btnExportOrderLine = New System.Windows.Forms.Button()
         Me.btnImportOrderLine = New System.Windows.Forms.Button()
+        Me.btnPrintOrderLine = New System.Windows.Forms.Button()
+        Me.btnPrintOrder = New System.Windows.Forms.Button()
         CType(Me.dgOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgOrderLine, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -469,12 +471,40 @@ Partial Class OrderForm
         Me.btnImportOrderLine.Text = "Import"
         Me.btnImportOrderLine.UseVisualStyleBackColor = True
         '
+        'btnPrintOrderLine
+        '
+        Me.btnPrintOrderLine.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrintOrderLine.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnPrintOrderLine.Location = New System.Drawing.Point(578, 493)
+        Me.btnPrintOrderLine.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPrintOrderLine.Name = "btnPrintOrderLine"
+        Me.btnPrintOrderLine.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnPrintOrderLine.Size = New System.Drawing.Size(85, 47)
+        Me.btnPrintOrderLine.TabIndex = 57
+        Me.btnPrintOrderLine.Text = "Print"
+        Me.btnPrintOrderLine.UseVisualStyleBackColor = True
+        '
+        'btnPrintOrder
+        '
+        Me.btnPrintOrder.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrintOrder.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnPrintOrder.Location = New System.Drawing.Point(578, 125)
+        Me.btnPrintOrder.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPrintOrder.Name = "btnPrintOrder"
+        Me.btnPrintOrder.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnPrintOrder.Size = New System.Drawing.Size(85, 47)
+        Me.btnPrintOrder.TabIndex = 58
+        Me.btnPrintOrder.Text = "Print"
+        Me.btnPrintOrder.UseVisualStyleBackColor = True
+        '
         'OrderForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
         Me.ClientSize = New System.Drawing.Size(1295, 729)
+        Me.Controls.Add(Me.btnPrintOrder)
+        Me.Controls.Add(Me.btnPrintOrderLine)
         Me.Controls.Add(Me.btnReloadOrderLine)
         Me.Controls.Add(Me.btnExportOrderLine)
         Me.Controls.Add(Me.btnImportOrderLine)
@@ -557,4 +587,6 @@ Partial Class OrderForm
     Friend WithEvents COSTLINEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QUANTITYDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents OrderLineBindingSource As BindingSource
+    Friend WithEvents btnPrintOrderLine As Button
+    Friend WithEvents btnPrintOrder As Button
 End Class

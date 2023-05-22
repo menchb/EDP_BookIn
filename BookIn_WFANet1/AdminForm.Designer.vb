@@ -37,10 +37,11 @@ Partial Class AdminForm
         Me.btnReload = New System.Windows.Forms.Button()
         Me.btnExportAdmin = New System.Windows.Forms.Button()
         Me.btnImportAdmin = New System.Windows.Forms.Button()
-        Me.AdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnPrint = New System.Windows.Forms.Button()
         CType(Me.dgAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -204,10 +205,6 @@ Partial Class AdminForm
         Me.btnImportAdmin.Text = "Import"
         Me.btnImportAdmin.UseVisualStyleBackColor = True
         '
-        'AdminBindingSource
-        '
-        Me.AdminBindingSource.DataSource = GetType(BookIn_WFANet1.Admin)
-        '
         'UsernameDataGridViewTextBoxColumn
         '
         Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
@@ -232,12 +229,30 @@ Partial Class AdminForm
         Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
         Me.IdDataGridViewTextBoxColumn.Width = 125
         '
+        'AdminBindingSource
+        '
+        Me.AdminBindingSource.DataSource = GetType(BookIn_WFANet1.Admin)
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnPrint.Location = New System.Drawing.Point(58, 585)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnPrint.Size = New System.Drawing.Size(85, 47)
+        Me.btnPrint.TabIndex = 56
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
         'AdminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
         Me.ClientSize = New System.Drawing.Size(1086, 729)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnReload)
         Me.Controls.Add(Me.btnExportAdmin)
         Me.Controls.Add(Me.btnImportAdmin)
@@ -281,4 +296,5 @@ Partial Class AdminForm
     Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AdminBindingSource As BindingSource
+    Friend WithEvents btnPrint As Button
 End Class

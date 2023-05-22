@@ -271,4 +271,7 @@ Public Class CustomerForm
         Call Load_Data_to_Grid("select " & Me.sqlColumns & " from customer")
     End Sub
 
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        importToExcel(Me.dgCustomer, "CustomerReport.xlsx")
+    End Sub
 End Class

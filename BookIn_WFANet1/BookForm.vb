@@ -350,4 +350,8 @@ Public Class BookForm
     Private Sub btnReload_Click(sender As Object, e As EventArgs) Handles btnReload.Click
         Call Load_Data_to_Grid("select " & Me.sqlColumns & " from book")
     End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        Call importToExcel(Me.dgBook, "BookReport.xlsx")
+    End Sub
 End Class

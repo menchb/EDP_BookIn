@@ -210,4 +210,8 @@ Public Class AdminForm
         Call Load_Data_to_Grid("select " & Me.sqlColumns & " from user")
     End Sub
 
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        Call importToExcel(Me.dgAdmin, "AdminReport.xlsx")
+    End Sub
+
 End Class

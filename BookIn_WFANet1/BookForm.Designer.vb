@@ -42,8 +42,6 @@ Partial Class BookForm
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.dgBook = New System.Windows.Forms.DataGridView()
-        Me.btnImportBook = New System.Windows.Forms.Button()
-        Me.btnExportBook = New System.Windows.Forms.Button()
         Me.ISBNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TITLEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PUBLICATIONYEARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,7 +50,10 @@ Partial Class BookForm
         Me.AUTHORIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PUBLISHERIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnImportBook = New System.Windows.Forms.Button()
+        Me.btnExportBook = New System.Windows.Forms.Button()
         Me.btnReload = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         CType(Me.dgBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -275,31 +276,6 @@ Partial Class BookForm
         Me.dgBook.Size = New System.Drawing.Size(579, 734)
         Me.dgBook.TabIndex = 46
         '
-        'btnImportBook
-        '
-        Me.btnImportBook.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnImportBook.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.btnImportBook.Location = New System.Drawing.Point(394, 624)
-        Me.btnImportBook.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnImportBook.Name = "btnImportBook"
-        Me.btnImportBook.Size = New System.Drawing.Size(85, 47)
-        Me.btnImportBook.TabIndex = 47
-        Me.btnImportBook.Text = "Import"
-        Me.btnImportBook.UseVisualStyleBackColor = True
-        '
-        'btnExportBook
-        '
-        Me.btnExportBook.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExportBook.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.btnExportBook.Location = New System.Drawing.Point(301, 624)
-        Me.btnExportBook.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnExportBook.Name = "btnExportBook"
-        Me.btnExportBook.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnExportBook.Size = New System.Drawing.Size(85, 47)
-        Me.btnExportBook.TabIndex = 48
-        Me.btnExportBook.Text = "Export"
-        Me.btnExportBook.UseVisualStyleBackColor = True
-        '
         'ISBNDataGridViewTextBoxColumn
         '
         Me.ISBNDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
@@ -367,6 +343,31 @@ Partial Class BookForm
         '
         Me.BookBindingSource.DataSource = GetType(BookIn_WFANet1.Book)
         '
+        'btnImportBook
+        '
+        Me.btnImportBook.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImportBook.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnImportBook.Location = New System.Drawing.Point(394, 624)
+        Me.btnImportBook.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnImportBook.Name = "btnImportBook"
+        Me.btnImportBook.Size = New System.Drawing.Size(85, 47)
+        Me.btnImportBook.TabIndex = 47
+        Me.btnImportBook.Text = "Import"
+        Me.btnImportBook.UseVisualStyleBackColor = True
+        '
+        'btnExportBook
+        '
+        Me.btnExportBook.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportBook.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnExportBook.Location = New System.Drawing.Point(301, 624)
+        Me.btnExportBook.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExportBook.Name = "btnExportBook"
+        Me.btnExportBook.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnExportBook.Size = New System.Drawing.Size(85, 47)
+        Me.btnExportBook.TabIndex = 48
+        Me.btnExportBook.Text = "Export"
+        Me.btnExportBook.UseVisualStyleBackColor = True
+        '
         'btnReload
         '
         Me.btnReload.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -380,12 +381,26 @@ Partial Class BookForm
         Me.btnReload.Text = "Reload"
         Me.btnReload.UseVisualStyleBackColor = True
         '
+        'btnPrint
+        '
+        Me.btnPrint.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnPrint.Location = New System.Drawing.Point(58, 624)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnPrint.Size = New System.Drawing.Size(85, 47)
+        Me.btnPrint.TabIndex = 50
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
         'BookForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
         Me.ClientSize = New System.Drawing.Size(1086, 729)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnReload)
         Me.Controls.Add(Me.dgBook)
         Me.Controls.Add(Me.btnExportBook)
@@ -447,4 +462,5 @@ Partial Class BookForm
     Friend WithEvents AUTHORIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PUBLISHERIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents btnReload As Button
+    Friend WithEvents btnPrint As Button
 End Class

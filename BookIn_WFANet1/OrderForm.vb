@@ -446,4 +446,12 @@ Public Class OrderForm
     Private Sub btnReloadOrderLine_Click(sender As Object, e As EventArgs) Handles btnReloadOrderLine.Click
         Call Load_Data_to_Grid2("select " & Me.sqlColumns2 & " from order_line")
     End Sub
+
+    Private Sub btnPrintOrderLine_Click(sender As Object, e As EventArgs) Handles btnPrintOrderLine.Click
+        Call importToExcel(Me.dgOrderLine, "OrderLineReport.xlsx")
+    End Sub
+
+    Private Sub btnPrintOrder_Click(sender As Object, e As EventArgs) Handles btnPrintOrder.Click
+        Call importToExcel(Me.dgOrder, "OrderReport.xlsx")
+    End Sub
 End Class

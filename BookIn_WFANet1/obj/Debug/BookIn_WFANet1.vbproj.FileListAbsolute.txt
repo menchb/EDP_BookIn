@@ -12,7 +12,6 @@ D:\GitHub\EDP_BookIn\BookIn_WFANet1\bin\Debug\System.Buffers.dll
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\bin\Debug\K4os.Compression.LZ4.dll
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\bin\Debug\K4os.Hash.xxHash.dll
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\bin\Debug\MySql.Data.xml
-D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.vbproj.AssemblyReference.cache
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.exe.config
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.AdminForm.resources
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.BookForm.resources
@@ -27,3 +26,4 @@ D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.vbproj.CopyComplete
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.exe
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.xml
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.pdb
+D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.vbproj.AssemblyReference.cache

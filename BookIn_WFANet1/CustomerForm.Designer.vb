@@ -44,10 +44,6 @@ Partial Class CustomerForm
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.dgCustomer = New System.Windows.Forms.DataGridView()
-        Me.btnReload = New System.Windows.Forms.Button()
-        Me.btnExportCustomer = New System.Windows.Forms.Button()
-        Me.btnImportCustomer = New System.Windows.Forms.Button()
-        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FIRSTNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LASTNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,6 +53,11 @@ Partial Class CustomerForm
         Me.PHONEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TOTALSPENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnReload = New System.Windows.Forms.Button()
+        Me.btnExportCustomer = New System.Windows.Forms.Button()
+        Me.btnImportCustomer = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         CType(Me.dgCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -281,48 +282,6 @@ Partial Class CustomerForm
         Me.dgCustomer.Size = New System.Drawing.Size(579, 734)
         Me.dgCustomer.TabIndex = 45
         '
-        'btnReload
-        '
-        Me.btnReload.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReload.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.btnReload.Location = New System.Drawing.Point(208, 637)
-        Me.btnReload.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnReload.Name = "btnReload"
-        Me.btnReload.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnReload.Size = New System.Drawing.Size(85, 47)
-        Me.btnReload.TabIndex = 52
-        Me.btnReload.Text = "Reload"
-        Me.btnReload.UseVisualStyleBackColor = True
-        '
-        'btnExportCustomer
-        '
-        Me.btnExportCustomer.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExportCustomer.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.btnExportCustomer.Location = New System.Drawing.Point(301, 637)
-        Me.btnExportCustomer.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnExportCustomer.Name = "btnExportCustomer"
-        Me.btnExportCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnExportCustomer.Size = New System.Drawing.Size(85, 47)
-        Me.btnExportCustomer.TabIndex = 51
-        Me.btnExportCustomer.Text = "Export"
-        Me.btnExportCustomer.UseVisualStyleBackColor = True
-        '
-        'btnImportCustomer
-        '
-        Me.btnImportCustomer.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnImportCustomer.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.btnImportCustomer.Location = New System.Drawing.Point(394, 637)
-        Me.btnImportCustomer.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnImportCustomer.Name = "btnImportCustomer"
-        Me.btnImportCustomer.Size = New System.Drawing.Size(85, 47)
-        Me.btnImportCustomer.TabIndex = 50
-        Me.btnImportCustomer.Text = "Import"
-        Me.btnImportCustomer.UseVisualStyleBackColor = True
-        '
-        'CustomerBindingSource
-        '
-        Me.CustomerBindingSource.DataSource = GetType(BookIn_WFANet1.Customer)
-        '
         'IDDataGridViewTextBoxColumn
         '
         Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
@@ -395,12 +354,68 @@ Partial Class CustomerForm
         Me.TOTALSPENTDataGridViewTextBoxColumn.Name = "TOTALSPENTDataGridViewTextBoxColumn"
         Me.TOTALSPENTDataGridViewTextBoxColumn.Width = 125
         '
+        'CustomerBindingSource
+        '
+        Me.CustomerBindingSource.DataSource = GetType(BookIn_WFANet1.Customer)
+        '
+        'btnReload
+        '
+        Me.btnReload.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReload.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnReload.Location = New System.Drawing.Point(208, 637)
+        Me.btnReload.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnReload.Name = "btnReload"
+        Me.btnReload.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnReload.Size = New System.Drawing.Size(85, 47)
+        Me.btnReload.TabIndex = 52
+        Me.btnReload.Text = "Reload"
+        Me.btnReload.UseVisualStyleBackColor = True
+        '
+        'btnExportCustomer
+        '
+        Me.btnExportCustomer.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportCustomer.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnExportCustomer.Location = New System.Drawing.Point(301, 637)
+        Me.btnExportCustomer.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExportCustomer.Name = "btnExportCustomer"
+        Me.btnExportCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnExportCustomer.Size = New System.Drawing.Size(85, 47)
+        Me.btnExportCustomer.TabIndex = 51
+        Me.btnExportCustomer.Text = "Export"
+        Me.btnExportCustomer.UseVisualStyleBackColor = True
+        '
+        'btnImportCustomer
+        '
+        Me.btnImportCustomer.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImportCustomer.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnImportCustomer.Location = New System.Drawing.Point(394, 637)
+        Me.btnImportCustomer.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnImportCustomer.Name = "btnImportCustomer"
+        Me.btnImportCustomer.Size = New System.Drawing.Size(85, 47)
+        Me.btnImportCustomer.TabIndex = 50
+        Me.btnImportCustomer.Text = "Import"
+        Me.btnImportCustomer.UseVisualStyleBackColor = True
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.btnPrint.Location = New System.Drawing.Point(58, 637)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnPrint.Size = New System.Drawing.Size(85, 47)
+        Me.btnPrint.TabIndex = 53
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
         'CustomerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
         Me.ClientSize = New System.Drawing.Size(1086, 729)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnReload)
         Me.Controls.Add(Me.btnExportCustomer)
         Me.Controls.Add(Me.btnImportCustomer)
@@ -470,4 +485,5 @@ Partial Class CustomerForm
     Friend WithEvents PHONEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EMAILDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TOTALSPENTDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btnPrint As Button
 End Class
