@@ -5,6 +5,9 @@ Welcome. This repository consists BookIn, an information management system for a
 Its current functionalities are the basic CRUD of records in the database and additionally allows import and export of csv files.
 
 ## To run the app:
+Download and install the installer file: ![SetupBookIn.msi](SetupBookIn/Debug/SetupBookIn.msi)
+
+Or you can manually run it in VS Studio Code.
 1. Clone the repository. 
 2. Open MySQL Workbench and go to Data Import. Select "Import from self-contained file" and choose BookInDumpAct5.sql from the repo.
 3. Open visual studio and click "Open a project or solution." Select the "BookIn_WFANet1.sln" inside the BookIn_WFANet1 folder.
