@@ -26,4 +26,3 @@ D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.vbproj.CopyComplete
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.exe
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.xml
 D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.pdb
-D:\GitHub\EDP_BookIn\BookIn_WFANet1\obj\Debug\BookIn_WFANet1.vbproj.AssemblyReference.cache
