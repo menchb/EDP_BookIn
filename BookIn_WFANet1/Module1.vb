@@ -43,19 +43,21 @@ Module Module1
         Dim xlsWB As Excel.Workbook
         Dim xlsSheet As Excel.Worksheet
 
+        ' Creates a workbook using the template found in the TEMPLATE folder
         xlsApp = New Excel.Application
         xlsApp.Visible = False
         xlsWB = xlsApp.Workbooks.Open(xlsPath & templatefilename)
-
         xlsSheet = xlsWB.Worksheets(1)
-        'xlsCell = xlsSheet.Range("A1")
-        'xlsSheet.Cells(3, 1) = strfilter
         Dim x, y As Integer
+
+        ' Copies each row of the dataGrid into the Excel sheet starting from the 8th row to make space for the necessary header elements in the template.
         For x = 0 To mydg.RowCount - 1
             For y = 0 To mydg.ColumnCount - 1
                 xlsSheet.Cells(x + 8, y + 1) = mydg.Rows(x).Cells(y).Value
             Next
         Next
+
+        ' Edits the line style where the data grid fills the Excel sheet
         With xlsSheet.Range(convertToLetters(1) & 8, convertToLetters(mydg.ColumnCount) & x + 6)
             .Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlLineStyle.xlContinuous
             .Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
@@ -65,7 +67,6 @@ Module Module1
             .Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
         End With
 
-        'xlsSheet.Cells(1, 1) = "Mike"
         templatefilename = templatefilename.Replace(".xlsx", "")
         templatefilename = templatefilename.Replace(".xls", "")
         Dim myfilename As String = templatefilename & " " & currentDate.ToString("mm-dd-yy hh-mm-ss") & ".xlsx"
