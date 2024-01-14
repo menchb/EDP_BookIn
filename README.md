@@ -33,3 +33,7 @@ Or you can manually run it in VS Studio Code.
 
 ### Admin screen
 ![Admin](./Screenshots/admin.png)
+
+## Demo:
+
+Demonstration of the Report Generation function for data grid with Microsoft Excel: [Youtube video](https://youtu.be/tOJP04mFexo?si=-verJN64IRo_28Yj)
